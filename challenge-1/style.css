@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.box {
+  display: flex;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.product-img {
+  background-image: url("./images/image-product-desktop.jpg");
+  background-size: cover;
+  width: 50%;
+  border-radius: 10px 0 0 10px;
+}
+
+.product {
+  width: 50%;
+  display: flex;
+  flex-flow: wrap column;
+  padding: 30px;
+}
+
+.product-type {
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 3px;
+}
+
+.product-title {
+  font-family: "Fraunces";
+  font-size: 2.3rem;
+  max-width: 250px;
+  margin-top: 20px;
+}
+
+.product-text {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.product-price h4 {
+  font-size: 2rem;
+  font-family: "Fraunces";
+  color: hsl(158, 36%, 37%);
+  font-weight: 400;
+}
+
+.product-price span {
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+}
+
+button {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: hsl(158, 36%, 37%);
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+button::before {
+  content: "";
+  background-image: url("./images/icon-cart.svg");
+  width: 15px;
+  height: 16px;
+  display: inline-block;
+}
+
+@media (max-width: 650px) {
+  body {
+    overflow-x: hidden;
+  }
+  .box {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .product,
+  .product-img {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .product-img {
+    border-radius: 0;
+    height: 20rem;
+    background-size: cover;
+  }
+
+  button {
+    max-width: 80%;
+  }
+}
